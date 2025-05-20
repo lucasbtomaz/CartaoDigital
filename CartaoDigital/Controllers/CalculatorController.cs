@@ -2,40 +2,75 @@
 
 namespace CartaoDigital.Controllers
 {
+    // Atributos da Classe
     [ApiController]
     [Route("[controller]")]
     public class CalculatorController : ControllerBase
     {
-        [HttpGet]
-        public int GetSoma(int num1, int num2)
+        [HttpGet("calculate")]
+        public string Calculate(string operation, double value1, double value2)
         {
-            var result = num1 + num2;
-            return result;
-        }
+            var alert = "Tome cuidado com números negativos";
+            var result = $"Resultado da {operation}: ";
 
-        [HttpGet("Multiplicacao")]
-        public int GetMultiplicacao(int num1, int num2)
-        {
-            var result = num1 * num2;
-            return result;
-        }
-
-        [HttpPost]
-        public double GetDivisao([FromBody] DivisaoRequest request)
-        {
-            return request.Divisao();
-        }
-
-        public class DivisaoRequest
-        {
-            public double Num1 { get; set; }
-            public double Num2 { get; set; }
-            public double Divisao()
+            switch (operation)
             {
-                return Num1 / Num2;
+                case "soma":
+                    result += Sum(value1, value2).ToString();
+                    break;
+                case "subtracao":
+                case "subtração":
+                    var substractResult = Subtract(value1, value2);
+                    if (substractResult < 0)
+                    {
+                        result += substractResult.ToString() + " " + alert;
+                    }
+                    else
+                    {
+                        result += substractResult.ToString();
+                    }
+                    break;
+                case "multiplicacao":
+                case "multiplicação":
+                    result += Multiply(value1, value2).ToString();
+                    break;
+                case "divisao":
+                case "divisão":
+                    result += Divide(value1, value2).ToString();
+                    break;
+                default:
+                    return $"Operação {operation} não encontrada.";
             }
+
+            return result;
         }
 
+        private double Sum(double value1, double value2)
+        {
+            var result = value1 + value2;
+            return result;
+        }
 
+        private double Subtract(double value1, double value2)
+        {
+            var result = value1 - value2;
+            return result;
+        }
+
+        private double Multiply(double value1, double value2)
+        {
+            var result = value1 * value2;
+            return result;
+        }
+
+        private double Divide(double value1, double value2)
+        {
+            if (value2 == 0)
+            {
+                throw new ArgumentException("Division by zero is not allowed");
+            }
+            var result = value1 / value2;
+            return result;
+        }
     }
 }

@@ -429,11 +429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oluca\\source\\repos\\CartaoDigital\\CartaoDigital\\CartaoDigital.csproj",
+      "projectUniqueName": "c:\\Users\\oluca\\source\\repos\\CartaoDigital\\CartaoDigital\\CartaoDigital.csproj",
       "projectName": "CartaoDigital",
-      "projectPath": "C:\\Users\\oluca\\source\\repos\\CartaoDigital\\CartaoDigital\\CartaoDigital.csproj",
+      "projectPath": "c:\\Users\\oluca\\source\\repos\\CartaoDigital\\CartaoDigital\\CartaoDigital.csproj",
       "packagesPath": "C:\\Users\\oluca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oluca\\source\\repos\\CartaoDigital\\CartaoDigital\\obj\\",
+      "outputPath": "c:\\Users\\oluca\\source\\repos\\CartaoDigital\\CartaoDigital\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -509,7 +509,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

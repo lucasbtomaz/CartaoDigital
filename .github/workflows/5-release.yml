@@ -1,0 +1,15 @@
+name: "5 - Release promote"
+
+on:
+  pull_request:
+    types: closed
+    branches: "main"
+
+jobs:
+  validate-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exibir autor e branch
+        run: |
+          echo "Autor: ${{ github.actor }}"
+          echo "Branch: ${{ github.head_ref }}"

@@ -1,0 +1,62 @@
+name: Reportar bug/problema
+
+description: 'Reportar um bug (problema) identificado'
+
+title: "Bug - coloque o tipo de bug aqui"
+
+labels: ["bug", "inner-source"]
+
+body:
+
+  - type: markdown
+
+    attributes:
+      value: "Agradeço sua sugestão de melhoria"
+
+  - type: textarea
+
+    id: behavior
+    attributes: 
+      label: "Comportamento observado:"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_bahavior
+    attributes: 
+      label: "Comportamento esperado:"
+      placeholder: Explique aqui o que deveria ser o resultado.
+    validations:
+      required: true
+
+  - type: textarea
+    id: how_to
+    attributes: 
+      label: "Como produzir o bug:"
+      placeholder: Informe como reproduzir o problema.
+    validations:
+      required: true
+
+  - type: textarea
+    id: resolution
+    attributes: 
+      label: "Solução possível:"
+      placeholder: Opcionalmente, explique aqui qual seria a possível solução.
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes: 
+      label: "Outras informações importantes"
+      placeholder: Se tiver outras informações importantes, coloque aqui.
+    validations:
+      required: true
+
+  - type: input
+    id: contato
+    attributes: 
+      label: "Contato:"
+      placeholder: E-mail
+    validations:
+      required: true

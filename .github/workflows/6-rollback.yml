@@ -1,0 +1,14 @@
+name: "6 - Cancel and Rollback Deployment"
+
+on:
+  pull_request:
+    types: opened
+
+jobs:
+  validate-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exibir autor e branch
+        run: |
+          echo "Autor: ${{ github.actor }}"
+          echo "Branch: ${{ github.head_ref }}"
